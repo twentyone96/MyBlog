@@ -1,5 +1,5 @@
 # Site
-title:              Moon
+title:              twentyone
 bio:                'Minimal, one column jekyll theme.'
 description:        "Moon is a minimal, one column jekyll theme for your blog."
 reading_time:       true
@@ -37,10 +37,10 @@ disqus_shortname:   taylantatli
   #ad-client:
   #ad-slot:
 #bing-verify:
-#email:
-twitter:            username
-facebook:           username
-github-url:         username
+email:              a2575810852@gmail.com
+#twitter:           username
+#facebook:          username
+github-url:         twentyone96
 #stackoverflow:     123456/username   from a "http://stackoverflow.com/users/123456/username" link
 #linkedin:          username
 #xing:              username
