@@ -504,9 +504,24 @@ a' + b'\mathbf i = acos\theta -bsin\theta + (asin\theta +bcos\theta )\mathbf i
 \\]
 这个过程也可以用矩阵与向量相乘表达为：
 \\[
-\left[ \begin{matrix} a'&-b'\\ b'&a'\\ \end{matrix} \right] =
-\left[ \begin{matrix} cos\theta &-sin\theta \\ sin\theta &cos\theta \\ \end{matrix} \right] 
-\left[ \begin{matrix} a&-b\\ b&a\\ \end{matrix} \right \]
+\left[ 
+\begin{matrix} 
+a' & -b'\\\\\\
+b' & a'
+\end{matrix} 
+\right] 
+= \left[
+\begin{matrix} 
+cos\theta & -sin\theta \\\\\\
+sin\theta & cos\theta 
+\end{matrix} 
+\right] 
+\left[
+\begin{matrix} 
+a & -b \\\\\\
+b & a
+\end{matrix} 
+\right]
 \\]
 啊哈，平面旋转竟然可以用复数来描述，很神奇吧。
 
