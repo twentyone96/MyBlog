@@ -92,22 +92,22 @@ comments: true
 \\[
 \begin{align}
 R 
-&= R_z(z_A,\alpha)R_y(y_A,\beta)R_x(x_A,\gamma) \\\\
+&= R_z(z_A,\alpha)R_y(y_A,\beta)R_x(x_A,\gamma) \\\\\\
 &= 
 \begin{bmatrix}
-\cos\alpha & -\sin\alpha & 0 \\
-\sin\alpha & \cos\alpha & 0 \\
-0 & 0 & 1 \\
+\cos\alpha & -\sin\alpha & 0 \\\\
+\sin\alpha & \cos\alpha & 0 \\\\
+0 & 0 & 1 
 \end{bmatrix}
 \begin{bmatrix}
-\cos\beta  & 0 & \sin\beta \\
-0 & 1 & 0 \\
--\sin\beta  & 0 & \cos\beta \\
+\cos\beta  & 0 & \sin\beta \\\\
+0 & 1 & 0 \\\\
+-\sin\beta  & 0 & \cos\beta 
 \end{bmatrix}
 \begin{bmatrix}
-1 & 0 & 0 \\
-0 & \cos\gamma & -\sin\gamma \\
-0 & \sin\gamma & \cos\gamma  \\
+1 & 0 & 0 \\\\
+0 & \cos\gamma & -\sin\gamma \\\\
+0 & \sin\gamma & \cos\gamma  
 \end{bmatrix} 
 \end{align}
 \\]
@@ -158,24 +158,23 @@ R _B^AC =
 之前的讨论旋转矩阵\\(R\\)的分解方式是按照\\(R_zR_yR_x \\)的顺序分解的，但实际上对\\(R_zR_yR_x\\)这三个矩阵进行组合有6种不同的分解方法。除此之外，如果我们允许只用到两个坐标轴进行旋转的话还可以有\\(R_zR_yR_z\\)这种类型的组合，这种类型的组合也有6种，比如下面这种：
 \\[
 \begin{align}
-R &= R_z(\alpha)R_y(\beta)R_z(\gamma) 
-\\
+R 
+&= R_z(\alpha)R_y(\beta)R_z(\gamma) \\\\\\
 &= \begin{bmatrix}
-\cos\alpha & -\sin\alpha & 0 \\
-\sin\alpha & \cos\alpha & 0 \\
+\cos\alpha & -\sin\alpha & 0 \\\\
+\sin\alpha & \cos\alpha & 0 \\\\
 0 & 0 & 1
 \end{bmatrix}
 \begin{bmatrix}
-\cos\beta  & 0 & \sin\beta \\
-0 & 1 & 0 \\
--\sin\beta  & 0 & \cos\beta \\
+\cos\beta  & 0 & \sin\beta \\\\
+0 & 1 & 0 \\\\
+-\sin\beta  & 0 & \cos\beta 
 \end{bmatrix}
 \begin{bmatrix}
-1 & 0 & 0 \\
-0 & \cos\gamma & -\sin\gamma \\
-0 & \sin\gamma & \cos\gamma  \\
+1 & 0 & 0 \\\\
+0 & \cos\gamma & -\sin\gamma \\\\
+0 & \sin\gamma & \cos\gamma  
 \end{bmatrix} 
-\\
 \end{align}
 \\]
 读者可以自行验算。这样的话欧拉角就有12种分解方法了。
@@ -190,21 +189,20 @@ R &= R_z(\alpha)R_y(\beta)R_z(\gamma)
 \\[
 R = 
 \begin{bmatrix}
-\cos\alpha & -\sin\alpha & 0 \\
-\sin\alpha & \cos\alpha & 0 \\
+\cos\alpha & -\sin\alpha & 0 \\\\
+\sin\alpha & \cos\alpha & 0 \\\\
 0 & 0 & 1
 \end{bmatrix}
 \begin{bmatrix}
-\cos\beta  & 0 & \sin\beta \\
-0 & 1 & 0 \\
+\cos\beta  & 0 & \sin\beta \\\\
+0 & 1 & 0 \\\\
 -\sin\beta  & 0 & \cos\beta \\
 \end{bmatrix}
 \begin{bmatrix}
-1 & 0 & 0 \\
-0 & \cos\gamma & -\sin\gamma \\
-0 & \sin\gamma & \cos\gamma  \\
+1 & 0 & 0 \\\\
+0 & \cos\gamma & -\sin\gamma \\\\
+0 & \sin\gamma & \cos\gamma  
 \end{bmatrix} 
-\\
 \\]
 
 #### 旋转矩阵变换为欧拉角
@@ -213,14 +211,14 @@ R =
 \\[
 R =
 \begin{bmatrix}
-r_{11} & r_{12} & r_{13} \\
-r_{21} & r_{22} & r_{23} \\
-r_{31} & r_{32} & r_{33} \\
+r_{11} & r_{12} & r_{13} \\\\
+r_{21} & r_{22} & r_{23} \\\\
+r_{31} & r_{32} & r_{33} 
 \end{bmatrix}
 =
 \begin{bmatrix}
-\cos\alpha\cos\beta & * & * \\
-\sin\alpha\cos\beta & * & * \\
+\cos\alpha\cos\beta & * & * \\\\
+\sin\alpha\cos\beta & * & * \\\\
 -\sin\beta & \cos\beta\sin\gamma & \cos\beta\cos\gamma
 \end{bmatrix}
 \\]
@@ -337,8 +335,8 @@ trace(R) = 2\cos\theta + 1
 B 
 = \frac{R - R^T}{2} = u_{\times}\sin\theta 
 = \sin\theta \begin{bmatrix}
-0 & -u_3 & u_2 \\
-u_3 & 0 & -u_1 \\
+0 & -u_3 & u_2 \\\\
+u_3 & 0 & -u_1 \\\\
 -u_2 & u_1 & 0
 \end{bmatrix}
 \\]
@@ -424,8 +422,8 @@ q = [s,x\mathbf i + y\mathbf j + z\mathbf k] \quad s,x,y,z\in \mathbb{R}
 \\]
 **四元数的加减**
 \\[
-q_{a} = [s_{a},\mathbf {a}]  \quad q_{b} = [s_{b},\mathbf {b}] \\ 
-q_{a} + q_{b} = [s_{a} + s_{b},\mathbf {a} + \mathbf {b}] \\
+q_{a} = [s_{a},\mathbf {a}]  \quad q_{b} = [s_{b},\mathbf {b}] \\\\
+q_{a} + q_{b} = [s_{a} + s_{b},\mathbf {a} + \mathbf {b}] \\\\
 q_{a} - q_{b} = [s_{a} - s_{b},\mathbf {a} - \mathbf {b}]
 \\]
 **四元数与四元数的积**
@@ -440,7 +438,7 @@ q_{a}q_{b} = [s_{a}s_{b} - \mathbf a\cdot \mathbf b, s_{a}\mathbf b + s_{b}\math
 \\]
 **四元数与标量的积**
 \\[
-q = [s,\mathbf{v}] \\
+q = [s,\mathbf{v}] \\\\
 \lambda q = \lambda[s,\mathbf{v}] = [\lambda s,\lambda \mathbf{v}]
 \\]
 **单位四元数**
@@ -522,9 +520,9 @@ a' + b'\mathbf i = acos\theta -bsin\theta + (asin\theta +bcos\theta )\mathbf i
 qpq^{-1} 
 & = [\cos\frac{1}{2}\theta,\sin\frac{1}{2}\theta \hat{\mathbf{v}}]
 [0,p]
-[ \cos\frac{1}{2}\theta,-\sin\frac{1}{2}\theta \hat{\mathbf{v}}] \\\\
+[ \cos\frac{1}{2}\theta,-\sin\frac{1}{2}\theta \hat{\mathbf{v}}] \\\\\\
 & = [0,(1-\cos\theta) \hat{\mathbf{v}} \hat{\mathbf{v}}^T \mathbf{p} 
-+ \cos\theta \mathbf{p} + \sin\theta \hat{\mathbf{v}} \times \mathbf{p} \]
++ \cos\theta \mathbf{p} + \sin\theta \hat{\mathbf{v}} \times \mathbf{p} ]
 \end{align}
 \\]
 这里的\\(\hat{\mathbf{v}}\\)是单位化后的向量\\(v\\)，读者可以利用四元数的乘法将其展开，这里惊喜地发现得到的结果与罗德里格公式一模一样，是的没错！
@@ -535,7 +533,7 @@ qpq^{-1}
 \\[
 \begin{align*}
 q_{a}q_{b} 
-& = [s_{a} + x_{a}\mathbf i + y_{a}\mathbf j +z_{a}\mathbf k \][s_{b} + x_{b}\mathbf i + y_{b}\mathbf j +z_{b}\mathbf k \] \\\\
+& = [s_{a} + x_{a}\mathbf i + y_{a}\mathbf j +z_{a}\mathbf k \][s_{b} + x_{b}\mathbf i + y_{b}\mathbf j +z_{b}\mathbf k \] \\\\\\
 & = \begin{bmatrix}
 s_a & -x_a & -y_a & -z_a \\\\
 x_a & s_a & -z_a & y_a \\\\
