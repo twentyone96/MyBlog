@@ -95,18 +95,18 @@ R
 &= R_z(z_A,\alpha)R_y(y_A,\beta)R_x(x_A,\gamma) \\\\\\
 &= 
 \begin{bmatrix}
-\cos\alpha & -\sin\alpha & 0 \\\\
-\sin\alpha & \cos\alpha & 0 \\\\
+\cos\alpha & -\sin\alpha & 0 \\\\\\
+\sin\alpha & \cos\alpha & 0 \\\\\\
 0 & 0 & 1 
 \end{bmatrix}
 \begin{bmatrix}
-\cos\beta  & 0 & \sin\beta \\\\
-0 & 1 & 0 \\\\
+\cos\beta  & 0 & \sin\beta \\\\\\
+0 & 1 & 0 \\\\\\
 -\sin\beta  & 0 & \cos\beta 
 \end{bmatrix}
 \begin{bmatrix}
-1 & 0 & 0 \\\\
-0 & \cos\gamma & -\sin\gamma \\\\
+1 & 0 & 0 \\\\\\
+0 & \cos\gamma & -\sin\gamma \\\\\\
 0 & \sin\gamma & \cos\gamma  
 \end{bmatrix} 
 \end{align}
@@ -148,7 +148,7 @@ R _B^AC = \underbrace{ R_z(z_A,\alpha) \overbrace{R_y(y_A,\beta) R_x(x_A,\gamma)
 \\[
 R _B^AC =  
 \underbrace{R_x(x_A,\gamma)}_3
-\underbrace{R_x(x_A,-\gamma) R_y(y_A,\beta) R_x(x_A,\gamma)}_2 \\
+\underbrace{R_x(x_A,-\gamma) R_y(y_A,\beta) R_x(x_A,\gamma)}_2 \\\\\\
 \underbrace{R_x(x_A,-\gamma) R_y(y_A,-\beta) R_z(z_A,\alpha) R_y(y_A,\beta) R_x(x_A,\gamma)}_1 {_B^AC}
 \\]
 第一步使坐标系B的Z轴与坐标系A的Z轴重合，绕着坐标系A(B)的Z轴转\\(\alpha\\)角度，然后再旋回去；第二步使坐标系B的Y轴与坐标系A的Y轴重合，绕着坐标系A(B)的Y轴旋转\\(\beta\\)角度，然后再旋回去；第三步绕着坐标系A(B)的X轴旋转。这个过程有点儿绕，好吧不是一点点绕，是很绕，读者可以停下来拿笔画一画来理解。
@@ -161,18 +161,18 @@ R _B^AC =
 R 
 &= R_z(\alpha)R_y(\beta)R_z(\gamma) \\\\\\
 &= \begin{bmatrix}
-\cos\alpha & -\sin\alpha & 0 \\\\
-\sin\alpha & \cos\alpha & 0 \\\\
+\cos\alpha & -\sin\alpha & 0 \\\\\\
+\sin\alpha & \cos\alpha & 0 \\\\\\
 0 & 0 & 1
 \end{bmatrix}
 \begin{bmatrix}
-\cos\beta  & 0 & \sin\beta \\\\
-0 & 1 & 0 \\\\
+\cos\beta  & 0 & \sin\beta \\\\\\
+0 & 1 & 0 \\\\\\
 -\sin\beta  & 0 & \cos\beta 
 \end{bmatrix}
 \begin{bmatrix}
-1 & 0 & 0 \\\\
-0 & \cos\gamma & -\sin\gamma \\\\
+1 & 0 & 0 \\\\\\
+0 & \cos\gamma & -\sin\gamma \\\\\\
 0 & \sin\gamma & \cos\gamma  
 \end{bmatrix} 
 \end{align}
@@ -189,18 +189,18 @@ R
 \\[
 R = 
 \begin{bmatrix}
-\cos\alpha & -\sin\alpha & 0 \\\\
-\sin\alpha & \cos\alpha & 0 \\\\
+\cos\alpha & -\sin\alpha & 0 \\\\\\
+\sin\alpha & \cos\alpha & 0 \\\\\\
 0 & 0 & 1
 \end{bmatrix}
 \begin{bmatrix}
-\cos\beta  & 0 & \sin\beta \\\\
-0 & 1 & 0 \\\\
+\cos\beta  & 0 & \sin\beta \\\\\\
+0 & 1 & 0 \\\\\\
 -\sin\beta  & 0 & \cos\beta \\
 \end{bmatrix}
 \begin{bmatrix}
-1 & 0 & 0 \\\\
-0 & \cos\gamma & -\sin\gamma \\\\
+1 & 0 & 0 \\\\\\
+0 & \cos\gamma & -\sin\gamma \\\\\\
 0 & \sin\gamma & \cos\gamma  
 \end{bmatrix} 
 \\]
@@ -211,14 +211,14 @@ R =
 \\[
 R =
 \begin{bmatrix}
-r_{11} & r_{12} & r_{13} \\\\
-r_{21} & r_{22} & r_{23} \\\\
+r_{11} & r_{12} & r_{13} \\\\\\
+r_{21} & r_{22} & r_{23} \\\\\\
 r_{31} & r_{32} & r_{33} 
 \end{bmatrix}
 =
 \begin{bmatrix}
-\cos\alpha\cos\beta & * & * \\\\
-\sin\alpha\cos\beta & * & * \\\\
+\cos\alpha\cos\beta & * & * \\\\\\
+\sin\alpha\cos\beta & * & * \\\\\\
 -\sin\beta & \cos\beta\sin\gamma & \cos\beta\cos\gamma
 \end{bmatrix}
 \\]
@@ -335,8 +335,8 @@ trace(R) = 2\cos\theta + 1
 B 
 = \frac{R - R^T}{2} = u_{\times}\sin\theta 
 = \sin\theta \begin{bmatrix}
-0 & -u_3 & u_2 \\\\
-u_3 & 0 & -u_1 \\\\
+0 & -u_3 & u_2 \\\\\\
+u_3 & 0 & -u_1 \\\\\\
 -u_2 & u_1 & 0
 \end{bmatrix}
 \\]
@@ -393,7 +393,7 @@ r = u\pi
 
 四元数定义为：
 \\[
-q = s + ai + bj + ck \quad s,a,b,c \in  \mathbb{R} \\
+q = s + ai + bj + ck \quad s,a,b,c \in  \mathbb{R} 
 \\]
 并满足下列运算规则，
 \\[
@@ -422,8 +422,8 @@ q = [s,x\mathbf i + y\mathbf j + z\mathbf k] \quad s,x,y,z\in \mathbb{R}
 \\]
 **四元数的加减**
 \\[
-q_{a} = [s_{a},\mathbf {a}]  \quad q_{b} = [s_{b},\mathbf {b}] \\\\
-q_{a} + q_{b} = [s_{a} + s_{b},\mathbf {a} + \mathbf {b}] \\\\
+q_{a} = [s_{a},\mathbf {a}]  \quad q_{b} = [s_{b},\mathbf {b}] \\\\\\
+q_{a} + q_{b} = [s_{a} + s_{b},\mathbf {a} + \mathbf {b}] \\\\\\
 q_{a} - q_{b} = [s_{a} - s_{b},\mathbf {a} - \mathbf {b}]
 \\]
 **四元数与四元数的积**
@@ -531,22 +531,22 @@ qpq^{-1}
 
 为了寻找四元数与旋转矩阵的关系，我们得将四元数与四元数相乘的过程用矩阵来描述。回忆前文中，复数与复数相乘可以用矩阵来描述，这个推广过去完成不成问题。
 \\[
-\begin{align*}
+\begin{align}
 q_{a}q_{b} 
 & = [s_{a} + x_{a}\mathbf i + y_{a}\mathbf j +z_{a}\mathbf k \][s_{b} + x_{b}\mathbf i + y_{b}\mathbf j +z_{b}\mathbf k \] \\\\\\
 & = \begin{bmatrix}
-s_a & -x_a & -y_a & -z_a \\\\
-x_a & s_a & -z_a & y_a \\\\
-y_a & z_a & s_a & -x_a \\\\
+s_a & -x_a & -y_a & -z_a \\\\\\
+x_a & s_a & -z_a & y_a \\\\\\
+y_a & z_a & s_a & -x_a \\\\\\
 z_a & -y_a & x_a & s_a
-\end{bmatrix} = Aq_b \\\\
+\end{bmatrix} = Aq_b \\\\\\
 & = \begin{bmatrix}
-s_b & -x_b & -y_b & -z_b \\\\
-x_b & s_b & z_b & -y_b \\\\
--y_b & z_b & s_b & x_b \\\\
+s_b & -x_b & -y_b & -z_b \\\\\\
+x_b & s_b & z_b & -y_b \\\\\\
+-y_b & z_b & s_b & x_b \\\\\\
 z_b & -y_b & x_b & s_b
 \end{bmatrix} = q_aB
-\end{align*}
+\end{align}
 \\]
 利用上面两式，可以得到：
 
@@ -554,8 +554,8 @@ z_b & -y_b & x_b & s_b
 qpq^{-1} 
 = Rp 
 = \begin{bmatrix}
-2(s^2+x^2)-1 & 2(xy-sz) & 2(xz+sy) \\
-2(xy+sz) & 2(s^2+y^2)-1 & 2(yz+sx) \\
+2(s^2+x^2)-1 & 2(xy-sz) & 2(xz+sy) \\\\\\
+2(xy+sz) & 2(s^2+y^2)-1 & 2(yz+sx) \\\\\\
 2(xz-sy) & 2(yz+sx) & 2(s^2+z^2)-1
 \end{bmatrix} p
 \\]
@@ -573,10 +573,10 @@ s = \pm \frac{1}{2} \sqrt{1 + r_{11} + r_{22} + r_{33}}
 (2)当\\(s \neq 0\\)时
 \\[
 \begin{align}
-s = \pm \frac{1}{2} \sqrt{1 + r_{11} + r_{22} + r_{33}} \\
-x = \frac{1}{4s}(r_{32} - r_{23}) \\
-y = \frac{1}{4s}(r_{13} - r_{31}) \\
-z = \frac{1}{4s}(r_{21} - r_{12}) \\
+s = \pm \frac{1}{2} \sqrt{1 + r_{11} + r_{22} + r_{33}} \\\\\\
+x = \frac{1}{4s}(r_{32} - r_{23}) \\\\\\
+y = \frac{1}{4s}(r_{13} - r_{31}) \\\\\\
+z = \frac{1}{4s}(r_{21} - r_{12}) \\\\\\
 \end{align}
 \\]
 
