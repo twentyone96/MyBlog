@@ -79,7 +79,7 @@ comments: true
 \\[
 ^A_BT_{4 \times 4} = 
 \begin{bmatrix}
-^A_BR & ^A_Bt \\ 0^T & 1 
+^A_BR & ^A_Bt \\\\ 0^T & 1 
 \end{bmatrix}
 \\]
 
@@ -92,7 +92,7 @@ comments: true
 \\[
 \begin{align}
 R 
-&= R_z(z_A,\alpha)R_y(y_A,\beta)R_x(x_A,\gamma) \\
+&= R_z(z_A,\alpha)R_y(y_A,\beta)R_x(x_A,\gamma) \\\\
 &= 
 \begin{bmatrix}
 \cos\alpha & -\sin\alpha & 0 \\
@@ -508,7 +508,7 @@ a' + b'\mathbf i = acos\theta -bsin\theta + (asin\theta +bcos\theta )\mathbf i
 \\[
 \left[ \begin{matrix} a'&-b'\\ b'&a'\\ \end{matrix} \right] =
 \left[ \begin{matrix} cos\theta &-sin\theta \\ sin\theta &cos\theta \\ \end{matrix} \right] 
-\left[ \begin{matrix} a&-b\\ b&a\\ \end{matrix} \right]
+\left[ \begin{matrix} a&-b\\ b&a\\ \end{matrix} \right \]
 \\]
 啊哈，平面旋转竟然可以用复数来描述，很神奇吧。
 
@@ -522,9 +522,9 @@ a' + b'\mathbf i = acos\theta -bsin\theta + (asin\theta +bcos\theta )\mathbf i
 qpq^{-1} 
 & = [\cos\frac{1}{2}\theta,\sin\frac{1}{2}\theta \hat{\mathbf{v}}]
 [0,p]
-[\cos\frac{1}{2}\theta,-\sin\frac{1}{2}\theta \hat{\mathbf{v}}] \\
+[ \cos\frac{1}{2}\theta,-\sin\frac{1}{2}\theta \hat{\mathbf{v}}] \\\\
 & = [0,(1-\cos\theta) \hat{\mathbf{v}} \hat{\mathbf{v}}^T \mathbf{p} 
-+ \cos\theta \mathbf{p} + \sin\theta \hat{\mathbf{v}} \times \mathbf{p} ]
++ \cos\theta \mathbf{p} + \sin\theta \hat{\mathbf{v}} \times \mathbf{p} \]
 \end{align}
 \\]
 这里的\\(\hat{\mathbf{v}}\\)是单位化后的向量\\(v\\)，读者可以利用四元数的乘法将其展开，这里惊喜地发现得到的结果与罗德里格公式一模一样，是的没错！
@@ -535,17 +535,17 @@ qpq^{-1}
 \\[
 \begin{align*}
 q_{a}q_{b} 
-& = [s_{a} + x_{a}\mathbf i + y_{a}\mathbf j +z_{a}\mathbf k][s_{b} + x_{b}\mathbf i + y_{b}\mathbf j +z_{b}\mathbf k] \\
+& = [s_{a} + x_{a}\mathbf i + y_{a}\mathbf j +z_{a}\mathbf k \][s_{b} + x_{b}\mathbf i + y_{b}\mathbf j +z_{b}\mathbf k \] \\\\
 & = \begin{bmatrix}
-s_a & -x_a & -y_a & -z_a \\
-x_a & s_a & -z_a & y_a \\
-y_a & z_a & s_a & -x_a \\
+s_a & -x_a & -y_a & -z_a \\\\
+x_a & s_a & -z_a & y_a \\\\
+y_a & z_a & s_a & -x_a \\\\
 z_a & -y_a & x_a & s_a
-\end{bmatrix} = Aq_b \\
+\end{bmatrix} = Aq_b \\\\
 & = \begin{bmatrix}
-s_b & -x_b & -y_b & -z_b \\
-x_b & s_b & z_b & -y_b \\
--y_b & z_b & s_b & x_b \\
+s_b & -x_b & -y_b & -z_b \\\\
+x_b & s_b & z_b & -y_b \\\\
+-y_b & z_b & s_b & x_b \\\\
 z_b & -y_b & x_b & s_b
 \end{bmatrix} = q_aB
 \end{align*}
