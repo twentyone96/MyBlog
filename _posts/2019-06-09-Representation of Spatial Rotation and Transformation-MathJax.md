@@ -77,8 +77,9 @@ comments: true
 \\]
 其中，
 \\[
-^A_BT_{4 \times 4} = \begin{bmatrix}
-^A_BR & ^A_Bt\\
+^A_BT_{4 \times 4} = 
+\begin{bmatrix}
+^A_BR & ^A_Bt \\
 0^T & 1 \\
 \end{bmatrix}
 \\]
@@ -96,7 +97,7 @@ R &= R_z(z_A,\alpha)R_y(y_A,\beta)R_x(x_A,\gamma)
 &= \begin{bmatrix}
 \cos\alpha & -\sin\alpha & 0 \\
 \sin\alpha & \cos\alpha & 0 \\
-0 & 0 & 1
+0 & 0 & 1 \\
 \end{bmatrix}
 
 \begin{bmatrix}
@@ -223,7 +224,7 @@ R =
 \begin{bmatrix}
 r_{11} & r_{12} & r_{13} \\
 r_{21} & r_{22} & r_{23} \\
-r_{31} & r_{32} & r_{33}
+r_{31} & r_{32} & r_{33} \\
 \end{bmatrix}
 =
 \begin{bmatrix}
