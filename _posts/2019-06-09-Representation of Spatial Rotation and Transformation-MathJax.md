@@ -79,8 +79,8 @@ comments: true
 \\[
 ^A_BT_{4 \times 4} = 
 \begin{bmatrix}
-^A_BR & ^A_Bt \\
-0^T & 1 \\
+^A_BR & ^A_Bt \\\\
+0^T & 1 \\\\
 \end{bmatrix}
 \\]
 
@@ -89,12 +89,14 @@ comments: true
 ### 2 欧拉角
 
 对于空间中两原点重合的坐标系\\(A​\\)和坐标系\\(B​\\)，矩阵\\(^A_BR​\\)作用于\\(^B P​\\)上得到\\(^A P​\\)的过程可以分解为以下形式：
+
 \\[
 \begin{align}
-R &= R_z(z_A,\alpha)R_y(y_A,\beta)R_x(x_A,\gamma) 
-\\
+R 
+&= R_z(z_A,\alpha)R_y(y_A,\beta)R_x(x_A,\gamma) \\
+&= 
 
-&= \begin{bmatrix}
+\begin{bmatrix}
 \cos\alpha & -\sin\alpha & 0 \\
 \sin\alpha & \cos\alpha & 0 \\
 0 & 0 & 1 \\
@@ -218,7 +220,7 @@ R =
 
 #### 旋转矩阵变换为欧拉角
 
-将上式相乘得到：
+将上式相乘得到，
 \\[
 R =
 \begin{bmatrix}
@@ -592,7 +594,7 @@ s = \pm \frac{1}{2} \sqrt{1 + r_{11} + r_{22} + r_{33}}
 s = \pm \frac{1}{2} \sqrt{1 + r_{11} + r_{22} + r_{33}} \\
 x = \frac{1}{4s}(r_{32} - r_{23}) \\
 y = \frac{1}{4s}(r_{13} - r_{31}) \\
-z = \frac{1}{4s}(r_{21} - r_{12})
+z = \frac{1}{4s}(r_{21} - r_{12}) \\
 
 \end{align}
 \\]
