@@ -79,8 +79,7 @@ comments: true
 \\[
 ^A_BT_{4 \times 4} = 
 \begin{bmatrix}
-^A_BR & ^A_Bt \\\\
-0^T & 1 \\\\
+^A_BR & ^A_Bt \\ 0^T & 1 
 \end{bmatrix}
 \\]
 
@@ -95,25 +94,21 @@ comments: true
 R 
 &= R_z(z_A,\alpha)R_y(y_A,\beta)R_x(x_A,\gamma) \\
 &= 
-
 \begin{bmatrix}
 \cos\alpha & -\sin\alpha & 0 \\
 \sin\alpha & \cos\alpha & 0 \\
 0 & 0 & 1 \\
 \end{bmatrix}
-
 \begin{bmatrix}
 \cos\beta  & 0 & \sin\beta \\
 0 & 1 & 0 \\
 -\sin\beta  & 0 & \cos\beta \\
 \end{bmatrix}
-
 \begin{bmatrix}
 1 & 0 & 0 \\
 0 & \cos\gamma & -\sin\gamma \\
 0 & \sin\gamma & \cos\gamma  \\
 \end{bmatrix} 
-
 \end{align}
 \\]
 对于任何一个旋转矩阵这个分解是唯一的，既然如此，那么我们可以利用分解出来的三个角度\\(\alpha \beta \gamma​\\)来描述空间旋转了。这个三个角度就是广为人知的欧拉角了，虽然这个旋转矩阵的分解是唯一的，分解的过程可以用两种不同的理解方式。
@@ -165,26 +160,22 @@ R _B^AC =
 \begin{align}
 R &= R_z(\alpha)R_y(\beta)R_z(\gamma) 
 \\
-
 &= \begin{bmatrix}
 \cos\alpha & -\sin\alpha & 0 \\
 \sin\alpha & \cos\alpha & 0 \\
 0 & 0 & 1
 \end{bmatrix}
-
 \begin{bmatrix}
 \cos\beta  & 0 & \sin\beta \\
 0 & 1 & 0 \\
 -\sin\beta  & 0 & \cos\beta \\
 \end{bmatrix}
-
 \begin{bmatrix}
 1 & 0 & 0 \\
 0 & \cos\gamma & -\sin\gamma \\
 0 & \sin\gamma & \cos\gamma  \\
 \end{bmatrix} 
 \\
-
 \end{align}
 \\]
 读者可以自行验算。这样的话欧拉角就有12种分解方法了。
@@ -203,13 +194,11 @@ R =
 \sin\alpha & \cos\alpha & 0 \\
 0 & 0 & 1
 \end{bmatrix}
-
 \begin{bmatrix}
 \cos\beta  & 0 & \sin\beta \\
 0 & 1 & 0 \\
 -\sin\beta  & 0 & \cos\beta \\
 \end{bmatrix}
-
 \begin{bmatrix}
 1 & 0 & 0 \\
 0 & \cos\gamma & -\sin\gamma \\
@@ -435,7 +424,7 @@ q = [s,x\mathbf i + y\mathbf j + z\mathbf k] \quad s,x,y,z\in \mathbb{R}
 \\]
 **四元数的加减**
 \\[
-q_{a} = [s_{a},\mathbf {a}]  \quad q_{b} = [s_{b},\mathbf {b}] \\
+q_{a} = [s_{a},\mathbf {a}]  \quad q_{b} = [s_{b},\mathbf {b}] \\ 
 q_{a} + q_{b} = [s_{a} + s_{b},\mathbf {a} + \mathbf {b}] \\
 q_{a} - q_{b} = [s_{a} - s_{b},\mathbf {a} - \mathbf {b}]
 \\]
@@ -530,14 +519,12 @@ a' + b'\mathbf i = acos\theta -bsin\theta + (asin\theta +bcos\theta )\mathbf i
 这里给出公式，空间上一点\\(p=(a,b,c)\\)绕向量\\(v\\)旋转角度\\(\theta\\)的四元数表达为：
 \\[
 \begin{align}
-
 qpq^{-1} 
-&= [\cos\frac{1}{2}\theta,\sin\frac{1}{2}\theta \hat{\mathbf{v}}]
+& = [\cos\frac{1}{2}\theta,\sin\frac{1}{2}\theta \hat{\mathbf{v}}]
 [0,p]
 [\cos\frac{1}{2}\theta,-\sin\frac{1}{2}\theta \hat{\mathbf{v}}] \\
-&=[0,(1-\cos\theta) \hat{\mathbf{v}} \hat{\mathbf{v}}^T \mathbf{p} 
+& = [0,(1-\cos\theta) \hat{\mathbf{v}} \hat{\mathbf{v}}^T \mathbf{p} 
 + \cos\theta \mathbf{p} + \sin\theta \hat{\mathbf{v}} \times \mathbf{p} ]
-
 \end{align}
 \\]
 这里的\\(\hat{\mathbf{v}}\\)是单位化后的向量\\(v\\)，读者可以利用四元数的乘法将其展开，这里惊喜地发现得到的结果与罗德里格公式一模一样，是的没错！
@@ -546,8 +533,7 @@ qpq^{-1}
 
 为了寻找四元数与旋转矩阵的关系，我们得将四元数与四元数相乘的过程用矩阵来描述。回忆前文中，复数与复数相乘可以用矩阵来描述，这个推广过去完成不成问题。
 \\[
-\begin{align}
-
+\begin{align*}
 q_{a}q_{b} 
 & = [s_{a} + x_{a}\mathbf i + y_{a}\mathbf j +z_{a}\mathbf k][s_{b} + x_{b}\mathbf i + y_{b}\mathbf j +z_{b}\mathbf k] \\
 & = \begin{bmatrix}
@@ -562,8 +548,7 @@ x_b & s_b & z_b & -y_b \\
 -y_b & z_b & s_b & x_b \\
 z_b & -y_b & x_b & s_b
 \end{bmatrix} = q_aB
-
-\end{align}
+\end{align*}
 \\]
 利用上面两式，可以得到：
 
@@ -590,12 +575,10 @@ s = \pm \frac{1}{2} \sqrt{1 + r_{11} + r_{22} + r_{33}}
 (2)当\\(s \neq 0\\)时
 \\[
 \begin{align}
-
 s = \pm \frac{1}{2} \sqrt{1 + r_{11} + r_{22} + r_{33}} \\
 x = \frac{1}{4s}(r_{32} - r_{23}) \\
 y = \frac{1}{4s}(r_{13} - r_{31}) \\
 z = \frac{1}{4s}(r_{21} - r_{12}) \\
-
 \end{align}
 \\]
 
