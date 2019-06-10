@@ -58,7 +58,10 @@ comments: true
 ^Ai_B & ^Aj_B & ^Ak_B
 \end{bmatrix}
 \\]
-![2019-04-17_094638](1.png)
+
+![2019-06-09-coordinate](../images/2019-06-09/2019-06-09-coordinate.png)
+
+
 
 #### 旋转平移的另一种描述
 
@@ -141,7 +144,7 @@ R _B^AC = \underbrace{ R_z(z_A,\alpha) \overbrace{R_y(y_A,\beta) R_x(x_A,\gamma)
 
 这里引用维基百科上的一个图来解释第二种方式，这张图表达的旋转是绕自身坐标系旋转(坐标系B)，只是这里旋转只用到了自身坐标系的两个轴。后面我们会看到工作原理是一样的，只是欧拉角分解的方式不同。
 
-![euler2](euler2.gif)
+![2019-06-09-euler](../images/2019-06-09/2019-06-09-euler.gif)
 
 第一种理解方式是绕着静态坐标系A旋转的，旋转轴实际上是\\((1,0,0)(0,1,0)(0,0,1)\\)这三个轴；而第二种理解方式是绕着动态坐标系B旋转的，在坐标系B的旋转过程中，这个动态坐标系会不断改变。
 
@@ -253,9 +256,7 @@ r_{31} & r_{32} & r_{33}
 
 绕Z轴能达到的效果是一样的。把绕XYZ三个轴旋转单位角度看作是旋转变换的一组基，正常情况下这组即线性无关，但当\\(\cos\beta = 0​\\)会让这组基线性相关，这就是万向锁的数学本质。前文中，我们提到了纯欧拉角，只需绕不同的两个轴旋转便可以到达任意位置，这是因为它们的三次旋转也构成了一组线性无关的基。
 
-![gimbal lock](gimbal lock.gif)
-
-
+![2019-06-09-gimbal-lock](../images/2019-06-09/2019-06-09-gimbal-lock.gif)
 
 ### 3 旋转向量
 
@@ -271,7 +272,7 @@ r_{31} & r_{32} & r_{33}
 \\]
 任何一个旋转矩阵都对应于这个集合的两个元素，为了消除二义性，可以将旋转角度的范围定义为\\([0,\pi]\\)之间，将这个集合一分为二，得到新的集合几何描述为空间中一个半球和平面上一个半圆，如下图所示。
 
-![2](2.png)
+![2019-06-09-Rodrigue](../images/2019-06-09/2019-06-09-Rodrigue.png)
 
 
 
@@ -319,7 +320,8 @@ b' = b\cos\theta + c\sin\theta
 \\[
 p' = [I\cos\theta + (1-\cos\theta)uu^T + u_{\times}\sin\theta]p
 \\]
-![3](3.png)
+
+![2019-06-09-Rodrigue2](../images/2019-06-09/2019-06-09-Rodrigue2.png)
 
 #### 罗德里格逆公式
 
@@ -411,7 +413,8 @@ q = s + ai + bj + ck \quad s,a,b,c \in  \mathbb{R}
 \mathbf{j} \times \mathbf{k} = \mathbf{i}, \quad
 \mathbf{k} \times \mathbf{i} = \mathbf{j}
 \\]
-![4](4.png)
+
+![2019-06-09-quaternions](../images/2019-06-09/2019-06-09-quaternions.png)
 
 我们也可以用有序对的形式，来表示四元数，
 \\[
@@ -537,8 +540,7 @@ qpq^{-1}
 & = [ \cos\frac{1}{2}\theta,\sin\frac{1}{2}\theta \hat{\mathbf{v}} ] 
 [0,p] 
 [ \cos\frac{1}{2}\theta,-\sin\frac{1}{2}\theta \hat{\mathbf{v}} ] \\\\\\
-& = [ 0,(1-\cos\theta) \hat{\mathbf{v}} \hat{\mathbf{v}}^T \mathbf{p} 
-+ \cos\theta \mathbf{p} + \sin\theta \hat{\mathbf{v}} \times \mathbf{p} ] 
+& = [ 0,(1-\cos\theta) \hat{\mathbf{v}} \hat{\mathbf{v}}^T \mathbf{p}  \cos\theta \mathbf{p} + \sin\theta \hat{\mathbf{v}} \times \mathbf{p} ] 
 \end{align}
 \\]
 这里的\\(\hat{\mathbf{v}}\\)是单位化后的向量\\(v\\)，读者可以利用四元数的乘法将其展开，这里惊喜地发现得到的结果与罗德里格公式一模一样，是的没错！
@@ -610,9 +612,7 @@ z = \frac{1}{4s}(r_{21} - r_{12}) \\\\\\
 
 这些转换关系如下图所示，红色箭头的转换公式本文已经详细介绍了。四元数与旋转向量的转化十分简单，这里就不赘述了；欧拉角与旋转向量或四元数的转化公式复杂些(这里就不介绍了，公式太难打了)，可以直接转化也可以利用旋转矩阵作为中介来实现。
 
-![convert](convert.png)
-
-
+![2019-06-09-coordinate](../images/2019-06-09/2019-06-09-coordinate.png)
 
 ### 参考(Reference)
 
