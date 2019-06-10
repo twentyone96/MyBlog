@@ -2,7 +2,7 @@
 layout: post
 title:  "Seeded Region Growing with codes"
 date:   2019-06-11
-excerpt: "A brief illustruction about seeded region growing."
+excerpt: "A brief illustration about seeded region growing."
 tag:
 - opencv
 - computer vision
@@ -21,7 +21,10 @@ comments: true
 
  The growing points should satisfy some necessary condition according the function of algorithm. Growing constraint  
 
-eg: abs|gray(firstPoint) - gray(nextPoint)| < threshold
+eg: 
+\\[ 
+abs \mid gray(firstPoint) - gray(nextPoint)\mid < threshold
+\\]
 
 ```c++
 #include <opencv2/opencv.hpp>
@@ -40,7 +43,8 @@ cv::Mat regionGrow(const cv::Mat &src, const cv::Point seed, int throld)
 		return resultImg;
 
 	resultImg.at<uchar>(seed.y, seed.x) = 255;
-	const int growDirection[8][2] = { {-1,-1}, {0,-1}, {1,-1}, {1,0}, {1,1}, {0,1}, {-1,1}, {-1,0} };
+	const int growDirection[8][2] = 
+	{ {-1,-1}, {0,-1}, {1,-1}, {1,0}, {1,1}, {0,1}, {-1,1}, {-1,0} };
 	std::stack<cv::Point> grownPoints;
 	grownPoints.push(seed);
 
@@ -51,9 +55,11 @@ cv::Mat regionGrow(const cv::Mat &src, const cv::Point seed, int throld)
 		for (int i = 0; i < 8; ++i)
 		{
 			//The position of next point
-			cv::Point nextPoint(currentPoint.x + growDirection[i][0], currentPoint.y + growDirection[i][1]);
+			cv::Point nextPoint(currentPoint.x + growDirection[i][0], 
+                                currentPoint.y + growDirection[i][1]);
 			//Growing constraint and Boundary constraint
-			if (nextPoint.x >= 0 && nextPoint.x < grayImg.cols && nextPoint.y >= 0 && nextPoint.y < grayImg.rows
+			if (nextPoint.x >= 0 && nextPoint.x < grayImg.cols 
+                && nextPoint.y >= 0 && nextPoint.y < grayImg.rows
 				&& growingConstraint(grayImg, currentPoint, nextPoint, throld) 
 				&& resultImg.at<uchar>(nextPoint.y, nextPoint.x) == 0)
 			{
@@ -67,9 +73,12 @@ cv::Mat regionGrow(const cv::Mat &src, const cv::Point seed, int throld)
 }
 
 //Growing Constraint
-bool growingConstraint(const cv::Mat &src, cv::Point currentPoint, cv::Point nextPoint, int throld)
+bool growingConstraint(const cv::Mat &src, 
+                       cv::Point currentPoint, 
+                       cv::Point nextPoint, int throld)
 {
-	int diff = abs(src.at<uchar>(currentPoint.y, currentPoint.x) - src.at<uchar>(nextPoint.y, nextPoint.x));
+	int diff = abs(src.at<uchar>(currentPoint.y, currentPoint.x) 
+                   - src.at<uchar>(nextPoint.y, nextPoint.x));
 	if (diff < throld)
 		return true;
 	return false;
@@ -91,7 +100,7 @@ int main()
 }
 ```
 
-<video src="..\images\2019-06-11\SRG.mp4"></video>
+<video src="..\images\2019-06-11\SRG.mp4" width="75%" height="75%"></video>
 
 
 
