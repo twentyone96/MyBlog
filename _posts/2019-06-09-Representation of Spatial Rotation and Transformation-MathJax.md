@@ -79,7 +79,8 @@ comments: true
 \\[
 ^A_BT_{4 \times 4} = 
 \begin{bmatrix}
-^A_BR & ^A_Bt \\\\ 0^T & 1 
+^A_BR & ^A_Bt \\\\\\
+0^T & 1 
 \end{bmatrix}
 \\]
 
@@ -533,11 +534,11 @@ b & a
 \\[
 \begin{align}
 qpq^{-1} 
-& = \left[ \cos\frac{1}{2}\theta,\sin\frac{1}{2}\theta \hat{\mathbf{v}} \right]
-\left[ 0,p \right]
-\left[ \cos\frac{1}{2}\theta,-\sin\frac{1}{2}\theta \hat{\mathbf{v}} \right] \\\\\\
-& = \left[ 0,(1-\cos\theta) \hat{\mathbf{v}} \hat{\mathbf{v}}^T \mathbf{p} 
-+ \cos\theta \mathbf{p} + \sin\theta \hat{\mathbf{v}} \times \mathbf{p} \right]
+& = [ \cos\frac{1}{2}\theta,\sin\frac{1}{2}\theta \hat{\mathbf{v}} ] 
+[0,p] 
+[ \cos\frac{1}{2}\theta,-\sin\frac{1}{2}\theta \hat{\mathbf{v}} ] \\\\\\
+& = [ 0,(1-\cos\theta) \hat{\mathbf{v}} \hat{\mathbf{v}}^T \mathbf{p} 
++ \cos\theta \mathbf{p} + \sin\theta \hat{\mathbf{v}} \times \mathbf{p} ] 
 \end{align}
 \\]
 这里的\\(\hat{\mathbf{v}}\\)是单位化后的向量\\(v\\)，读者可以利用四元数的乘法将其展开，这里惊喜地发现得到的结果与罗德里格公式一模一样，是的没错！
