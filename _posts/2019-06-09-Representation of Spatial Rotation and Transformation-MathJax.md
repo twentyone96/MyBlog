@@ -4,9 +4,10 @@ title:  "空间旋转平移描述"
 date:   2019-06-09
 excerpt: "介绍旋转矩阵、欧拉角、旋转向量、四元数等描述方法"
 tag:
-- markdown 
 - math
-- jekyll
+- euler angle
+- quaternion
+- rodrigues
 comments: true
 ---
 
